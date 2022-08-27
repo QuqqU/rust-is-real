@@ -1,0 +1,12 @@
+[package]
+name = "is-real"
+version = "0.1.1"
+edition = "2021"
+description   = "Is this real?"
+documentation = "TBD"
+readme = "README.md"
+repository = "https://github.com/~~"
+license = "MIT"
+keywords = ["automata", "real number", "real", "number", "floating point"]
+
+[dependencies]
