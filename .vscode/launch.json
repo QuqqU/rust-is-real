@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'is-real'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=is-real",
+                    "--package=is-real"
+                ],
+                "filter": {
+                    "name": "is-real",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'is-real'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=is-real",
+                    "--package=is-real"
+                ],
+                "filter": {
+                    "name": "is-real",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
