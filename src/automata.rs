@@ -34,7 +34,7 @@ impl<'a> FloatingPoint<'a> {
         let (frac_len, fraction) = try_parse!(self, read_fraction);
         let exponent = try_parse!(self, read_exponent);
         try_parse!(self, read_eos);
-        Ok((fraction as f64).powi(exponent - frac_len as i32))
+        Ok((fraction as f64) * 10_f64.powi(exponent - frac_len as i32))
     }
 }
 
