@@ -33,7 +33,7 @@ impl<'a> FloatingPoint<'a> {
     fn read(&mut self) -> ParsingResult<f64> {
         let (frac_len, fraction) = try_parse!(self, read_fraction);
         let exponent = try_parse!(self, read_exponent);
-        try_parse!(self, read_eoln);
+        try_parse!(self, read_eos);
         Ok((fraction as f64).powi(exponent - frac_len as i32))
     }
 }
@@ -101,7 +101,7 @@ impl<'a> FloatingPoint<'a> {
         }
     }
 
-    fn read_eoln(&self) -> ParsingResult<()> {
+    fn read_eos(&self) -> ParsingResult<()> {
         match self.curr {
             '\0' => Ok(()),
             _ => Err(()),

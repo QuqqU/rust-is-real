@@ -1,12 +1,19 @@
 [package]
 name = "is-real"
-version = "0.1.1"
+version = "0.1.0"
 edition = "2021"
 description   = "Is this real?"
-documentation = "TBD"
+documentation = "https://docs.rs/is-real"
 readme = "README.md"
-repository = "https://github.com/~~"
+homepage = "https://docs.rs/is_real"
+repository = "https://github.com/QuqqU/rust-is-real"
 license = "MIT"
-keywords = ["automata", "real number", "real", "number", "floating point"]
+keywords = ["automata", "real", "number", "floating"]
+
+[profile.dev]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
 
 [dependencies]
