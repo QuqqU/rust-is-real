@@ -1,6 +1,6 @@
 [package]
 name = "is-real"
-version = "0.1.0"
+version = "0.1.3"
 edition = "2021"
 description   = "Is this real?"
 documentation = "https://docs.rs/is-real"
